@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 // const woohooService = require('../services/woohooService');
 // const categoryProductModel = require('../models/productList');
 
@@ -138,6 +140,7 @@
 
 // _______________________________________________333333333333333333333333333___________________________________________________
 
+>>>>>>> b5229e63d4816516c5a2cdeb62ebdfceed8b13dd
 const woohooService = require('../services/woohooService');
 const categoryProductModel = require('../models/productList');
 const productDetailModel = require('../models/productdetail'); // 👈 Add this

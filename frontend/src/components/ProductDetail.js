@@ -51,8 +51,13 @@ function ProductDetail() {
   const denominationOptions = Array.isArray(product.denominations)
     ? product.denominations
     : typeof product.denominations === 'string'
+<<<<<<< HEAD
+      ? product.denominations.replace(/[\[\]]/g, '').split(',').map(d => d.trim())
+      : [];
+=======
      ? product.denominations.replace(/[[]]/g, '').split(',').map(d => d.trim())
     : [];
+>>>>>>> b5229e63d4816516c5a2cdeb62ebdfceed8b13dd
 
   return (
     <div className="product-detail">

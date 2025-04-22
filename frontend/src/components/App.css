@@ -289,3 +289,70 @@ a {
   margin-top: 20px;
 }
 
+
+/* Denomination Dropdown */
+.denomination-dropdown {
+  padding: 8px;
+  font-size: 16px;
+  width: 200px;
+  margin-top: 10px;
+}
+
+/* Buy Now Button */
+.buy-now-btn {
+  padding: 12px 20px;
+  background-color: #28a745;
+  color: white;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.buy-now-btn:hover {
+  background-color: #218838;
+}
+
+.buy-now-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.buy-now-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.payment-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  padding: 20px;
+  text-align: center;
+}
+
+.proceed-payment-btn {
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.proceed-payment-btn:hover {
+  background-color: #0056b3;
+}
+ 
