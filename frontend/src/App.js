@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ProductList from './components/ProductList';
 import ProductDetail from './components/ProductDetail';  // Import the ProductDetail component
 import Categories from './components/Categories';
+import PaymentPage from './components/PaymentPage';
+
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
         
         {/* Route for the product detail page based on SKU */}
         <Route path="/products/:sku" element={<ProductDetail />} />
+
+        <Route path="/payment" element={<PaymentPage />} />
       </Routes>
     </Router>
   );
