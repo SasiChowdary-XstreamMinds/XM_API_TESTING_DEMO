@@ -5,6 +5,7 @@ const categoryRoutes = require('./routes/categoryRoutes');
 const productRoutes = require('./routes/productRoutes');
 const productDetailsRoutes = require('./routes/productDetailsRoutes');
 const relatedProductRoutes = require('./routes/relatedProductRoutes');
+const orderRoutes = require('./routes/orderRoutes');
 
 const app = express();
 
@@ -21,6 +22,8 @@ app.use('/api/products', productRoutes);
 app.use('/api/products', relatedProductRoutes);
 app.use('/api/product-details', productRoutes);
 app.use('/api/product-details', productDetailsRoutes);
+app.use('/api/orders', orderRoutes);
+
 
 
 // Start the server

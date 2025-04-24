@@ -55,22 +55,28 @@ function sortQueryParams(url) {
 async function fetchData(url, method, body = {}) {
   const { signature, dateAtClient } = generateSignature(method, url, body);
 
-  try {
-    const response = await axios.get(url, {
-      headers: {
-        'Authorization': `Bearer ${bearerToken}`,
-        'signature': signature,
-        'dateAtClient': dateAtClient,
-      },
-    });
+  const config = {
+    method,
+    url,
+    headers: {
+      'Authorization': `Bearer ${bearerToken}`,
+      'signature': signature,
+      'dateAtClient': dateAtClient,
+      'Content-Type': 'application/json',
+    },
+    data: method !== 'GET' && method !== 'DELETE' ? body : undefined,
+  };
 
-   // Log the response data for debugging
+  try {
+    const response = await axios(config);
     return response.data;
   } catch (error) {
-    console.error('Error fetching data:', error);
+    console.error('Error fetching data:', error.response?.data || error.message);
     throw error;
   }
 }
+
+  
 
 
 module.exports = { fetchData };
